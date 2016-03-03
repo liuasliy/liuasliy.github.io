@@ -200,6 +200,98 @@
   
   
 
+  <article class="post post-type-tags " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/01/03/django-ckeditor部署配置/" itemprop="url">
+                  django-ckeditor部署配置
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            发表于
+            <time itemprop="dateCreated" datetime="2016-01-03T20:16:25+08:00" content="2016-01-03">
+              2016-01-03
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/01/03/django-ckeditor部署配置/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/01/03/django-ckeditor部署配置/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <p>版本号：<br>django：1.7<br>ckeditor：4.5.3</p>
+<p>下载ckeditor：<a href="https://github.com/django-ckeditor/django-ckeditor">https://github.com/django-ckeditor/django-ckeditor</a><br>安装：python setup.py install</p>
+<h3 id="一、安装富文本">一、安装富文本</h3><p>1）安装文件夹ckeditor拷贝至项目根目录下；<br>2）在settings.py配置文件下INSTALLED_APPS中添加<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">'ckeditor'</span>,</span><br></pre></td></tr></table></figure></p>
+<p>然后在settings.py中添加上传目录如下：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">CKEDITOR_UPLOAD_PATH = <span class="string">'./media/upload/'</span></span><br></pre></td></tr></table></figure></p>
+<p>3)在系统urls文件下添加如下urls:<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">url(<span class="string">r'^ckeditor/'</span>, include(<span class="string">'ckeditor_uploader.urls'</span>)),</span><br></pre></td></tr></table></figure></p>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/01/03/django-ckeditor部署配置/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
 
     
@@ -415,7 +507,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">12</span>
+              <span class="site-state-item-count">13</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
