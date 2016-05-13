@@ -189,15 +189,96 @@
 
     
     
+
+    
       
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-tags " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/05/13/django收藏夹功能/" itemprop="url">
+                  django收藏夹功能
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            发表于
+            <time itemprop="dateCreated" datetime="2016-05-13T20:40:25+08:00" content="2016-05-13">
+              2016-05-13
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/05/13/django收藏夹功能/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/05/13/django收藏夹功能/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body">
+
       
-        
-        
-        
       
 
       
-    
+        
+          <p>&emsp;&emsp;准备给游记页面增加收藏功能 ，网上找了些都不是很适合或者根本不能用，所以决定自己写一个，在这里记录下过程，也可作为学习过程中的回顾。</p>
+<h3 id="新建收藏应用">新建收藏应用</h3><p>新建收藏应用名：favourite<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python manage.py startapp favourite</span><br></pre></td></tr></table></figure></p>
+<h3 id="设置model">设置model</h3><p>设置两个字段：用户和游记<br>用户使用外键关联整个用户表，游记外键关联整个游记表，因为用到游记应用的数据表，导入游记应用，具体创建代码如下:<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> travels.models <span class="keyword">import</span> Travels</span><br><span class="line"><span class="keyword">from</span> django.contrib.auth.models <span class="keyword">import</span> User</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Favourite</span><span class="params">(models.Model)</span>:</span></span><br><span class="line">    user = models.ForeignKey(User, default=<span class="string">""</span>)   <span class="comment">#用户</span></span><br><span class="line">    travels = models.ForeignKey(Travels, default=<span class="string">""</span>)  <span class="comment">#游记</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__unicode__</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="keyword">return</span> self.travels.title</span><br><span class="line">    <span class="class"><span class="keyword">class</span> <span class="title">Meta</span>:</span></span><br><span class="line">        verbose_name = <span class="string">'游记标题'</span></span><br><span class="line">        verbose_name_plural = <span class="string">'收藏夹列表'</span></span><br></pre></td></tr></table></figure></p>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/05/13/django收藏夹功能/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
 
     
       
@@ -996,96 +1077,6 @@
 
             
           </span>
-        
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-tags " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/02/07/第25轮阿森纳客场挑战伯恩茅斯/" itemprop="url">
-                  第25轮阿森纳客场伯恩茅斯
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            发表于
-            <time itemprop="dateCreated" datetime="2016-02-07T23:30:00+08:00" content="2016-02-07">
-              2016-02-07
-            </time>
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/02/07/第25轮阿森纳客场挑战伯恩茅斯/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/02/07/第25轮阿森纳客场挑战伯恩茅斯/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <h3 id="第24轮阿森纳主场对阵南安普顿">第24轮阿森纳主场对阵南安普顿</h3><hr>
-<p><strong>时间：</strong>2016-02-07 21:30<br><strong>地点：</strong>酋长球场<br><strong>比赛结果：</strong>0:2</p>
-<h4 id="写在赛前">写在赛前</h4><p>&emsp;&emsp;正直春节之际，除夕夜就是破厂比赛，所以直接决定看破厂比赛。这四轮打的很郁闷，0进球，这可是很难受的一点，导致本轮之前排名已跌落第四，在还剩14轮的情况下，要夺冠还是会有困难。所以这场比赛将是非常重要的一场，必须进球，必须全取三分，才能提升全队士气，增加全队信心。<br>&emsp;&emsp;再看这场比赛的对手-伯恩茅斯，可以说实力不强，面对这样的对手，全取三分也不是很难。看好破厂凭此战一改颓势，能进球，能三分。</p>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/02/07/第25轮阿森纳客场挑战伯恩茅斯/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
         
       
     </div>
